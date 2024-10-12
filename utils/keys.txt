@@ -1,0 +1,2 @@
+api-key=7afada8114fad79c
+secret-key=NzhlODQ2NTg4N2MzY2MyNTU3YTYyZWRmNDRiMzlkNjMyYzlhZjk5Mjg4YjExZjUwNDZkZWVkMTE5ZDQwYzMwYg==
