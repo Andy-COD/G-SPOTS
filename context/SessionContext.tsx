@@ -1,12 +1,11 @@
 import auth, { FirebaseAuthTypes } from "@react-native-firebase/auth";
 import { getAsyncValue } from "@/utils/helper";
 import { useRouter } from "expo-router";
-import { onAuthStateChanged } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 
 interface AuthContextProps {
   user: FirebaseAuthTypes.User | null;
-  // setUser: React.Dispatch<React.SetStateAction<FirebaseAuthTypes.User | null>>;
+  setUser: any;
   loginWithEmail: (email: string, password: string) => Promise<void>;
   loginWithMobile: (phoneNumber: string) => Promise<void>;
   logout: () => void;
@@ -55,7 +54,7 @@ export const SessionProvider = ({ children }: any) => {
 
   return (
     <SessionContext.Provider
-      value={{ user, loginWithEmail, loginWithMobile, logout, isAuthenticated }}
+      value={{ user, loginWithEmail, loginWithMobile, logout, isAuthenticated, setUser }}
     >
       {children}
     </SessionContext.Provider>
